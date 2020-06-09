@@ -27,7 +27,7 @@ void pausarConsola();
 void ingresoDatos(int[]);
 void mostrarDatos(int[]);
 //main
-void main(){//main
+int main(){//main
   int op,votos[100];//declaro
   //el arreglo es para pasarlo como referencia a las funciones
   while(op!=3){//sale si es 3
@@ -58,9 +58,9 @@ void main(){//main
 }//fin del main
 
 void pausarConsola(){
-  while (getchar() != '\n');
-  printf("Presione ENTER para continuar....");//Mensaje
-  getchar();//pausar pantalla
+  while (getchar() != '\n');//limpia buffer de entrada
+  printf("Presione ENTER para continuar....");//mensaje al usuario
+  getchar();//pausa la consola hasta presionar enter
 }
 
 void ingresoDatos(int votos[]){//funcion paso x referencia
