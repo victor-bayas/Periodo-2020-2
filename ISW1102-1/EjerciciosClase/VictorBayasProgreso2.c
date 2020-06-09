@@ -23,6 +23,7 @@ total de votos
 #include <stdio.h>
 #include <stdlib.h>
 //prototipos
+void pausarConsola();
 void ingresoDatos(int[]);
 void mostrarDatos(int[]);
 //main
@@ -33,28 +34,34 @@ void main(){//main
     //mensajes y lecturas
     printf("Menu - Victor Bayas\nINFO: Ingrese primero los votos\n1. Ingresar Votos\n2. Imprimir Votos Ingresados\n3. Salir\nIngrese una opcion: ");//imprime
     scanf("%d",&op);//leo
-    system("cls");//limpiar pantalla
+    system("clear");//limpiar pantalla
     switch(op){
       case 1:
       ingresoDatos(votos);//llamo funcion
-      system("pause");//pausar pantalla
-      system("cls");//limpiar pantalla
+      pausarConsola();//pausa
+      system("cls||clear");//limpiar pantalla
       break;//sale switch
       case 2:
       mostrarDatos(votos);//llamo funcion
-      system("pause");//pausar pantalla
-      system("cls");//limpiar pantalla
+      pausarConsola();//pausa
+      system("cls||clear");//limpiar pantalla
       break;//sale switch
       case 3://caso3
       exit(0);//sale
       default://error
       printf("ERROR\nOpcion No Valida\n");//error
-      system("pause");//pausar pantalla
-      system("cls");//limpiar pantalla
+      pausarConsola();//pausa
+      system("cls||clear");//limpiar pantalla
       break;//sale switch
     }//fin
   }//fin
 }//fin del main
+
+void pausarConsola(){
+  while (getchar() != '\n');
+  printf("Presione ENTER para continuar....");//Mensaje
+  getchar();//pausar pantalla
+}
 
 void ingresoDatos(int votos[]){//funcion paso x referencia
   int voto_actual=-1;//inicializo
