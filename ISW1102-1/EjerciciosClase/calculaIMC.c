@@ -13,7 +13,7 @@ obesidad 30 y 39.9
 void main()
 {
   float peso,altura,imc=0;
-  printf("ingrese su peso (kg): ");
+  printf("ingrese su Peso (kg): ");
   scanf("%f", &peso);
   printf("ingrese su altura (metros): ");
   scanf("%f", &altura);
