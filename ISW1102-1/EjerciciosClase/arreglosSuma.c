@@ -29,7 +29,7 @@ void main(){
       pares(n);
       break;
       default:
-      printf("ERROR\n");
+      printf("ERROR\n\n");
       break;
     }
   }
