@@ -14,7 +14,7 @@ void main(){
       printf("Ingrese la cantidad de numeros: ");
       scanf("%d",&n);
       while(n<=0){
-        printf("ERROR\nIngrese la cantidad de numeros: ");
+        printf("ERROR\nIngrese la cantidad de Numeros: ");
         scanf("%d",&n);
       }
       printf("La suma es: %.2f\n",sumaFuncion(n));
